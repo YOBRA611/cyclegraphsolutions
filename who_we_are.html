@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--favicon-->
+    <link rel="icon" href="Logo/Screenshot 2026-04-13 105834.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.typekit.net/hln2bjh.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <title>Who we are - Cyclegraph Solutions</title>
+</head>
+<style>
+/* HERO ABOUT */
+.hero-about {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background: url(Images/292aefb2952504bf758e2a77cefa17891.jpg);
+    background-size: cover;
+    background-position: center;
+
+    height: 40vh;
+    min-height: 250px; /* prevents it from being too small on mobile */
+}
+/* Overlay (optional but makes text readable 🔥) */
+.hero-about::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+/* Content */
+.about-content {
+    position: relative; /* sits above overlay */
+    z-index: 1;
+    padding: 0 20px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    animation: fadeUp 1s ease;
+}
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Heading */
+.about-content h2 {
+    color: #ffffff;
+    font-size: 50px;
+}
+/* Text */
+.about-content p {
+    color: #fff;
+    font-size: 18px;
+}
+/* Tablet */
+@media (max-width: 768px) {
+    .about-content h2 {
+        font-size: 36px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
+}
+/* Mobile */
+@media (max-width: 480px) {
+    .hero-about {
+        height: 35vh;
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+    }
+}
+/* DESTINATION SECTION */
+.destination{
+  padding:100px 8%;
+  min-height:80vh;
+  display:flex;
+  align-items:center;
+  background-color:rgb(0, 0, 0);
+}
+.destination-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:100px;
+}
+/* LEFT CONTENT */
+.destination-text{
+  max-width:1100px;
+}
+.destination-text h1{
+  font-size:48px;
+  line-height:1.3;
+  font-family: "myriad-pro", sans-serif;
+  font-weight:500;
+  margin-bottom:25px;
+  color: #fff;
+}
+.highlight{
+  font-family:'Great Vibes', cursive;
+  color:#ff0000;
+  font-size:32px;
+  margin-left:10px;
+}
+.destination-text p{
+  font-size:15px;
+  line-height:1.8;
+  opacity:0.85;
+  margin-bottom:35px;
+  color: #fff;
+}
+/* BUTTONS */
+.destination-buttons{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+.btn-outline{
+  padding:12px 26px;
+  border:1px solid #ffffff;
+  border-radius:30px;
+  color:rgb(255, 255, 255);
+  text-decoration:none;
+  font-size:13px;
+  letter-spacing:1px;
+  transition:0.3s;
+}
+.btn-outline:hover{
+  background:#ff0000;
+  color:#ffffff;
+}
+.or{
+  font-size:13px;
+  color: #fff;
+  opacity:0.7;
+}
+/* RIGHT IMAGES */
+.destination-images{
+  display:flex;
+  gap:40px;
+  align-items:center;
+}
+/* LARGE IMAGE */
+.img-large img{
+  width:320px;
+  height:500px;
+  object-fit:cover;
+  border-radius:20px;
+}
+/* RIGHT COLUMN */
+.img-right{
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+.img-small img{
+  width:260px;
+  height:235px;
+  object-fit:cover;
+  border-radius:20px;
+}
+/*styling about-section*/
+.about-section{
+    padding: 40px;
+    border: 50px;
+}
+.container{
+    display: flex;
+    gap: 50px;
+}
+.top h3{
+    grid-column: 1 / -1;
+    font-size: 2rem;
+    font-family: "myriad-pro", sans-serif;
+    font-weight:500;
+    text-align: left;       /* align with left buttons */
+    padding-left: 0;        /* optional: same padding as sidebar */
+    margin-bottom: 10px;
+    color: #fff;
+}
+.top .about-text{
+    font-size: 16px;
+    text-align: justify;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.image-section{
+    flex: 1;
+    min-width: 510px;
+    padding: 1px;
+}
+.image-section img{
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.393);;
+}
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .image-section {
+    min-width: 100%;
+  }
+
+  .top h3 {
+    text-align: center;
+  }
+
+  .top .about-text {
+    text-align: center;
+  }
+}
+/* ===== FAQ + WHY US SECTION ===== */
+.faq-section {
+    padding: 80px 20px;
+    background: #000000;
+}
+.faq-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+/* ===== LEFT: WHY CHOOSE US ===== */
+.Contactinfo h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+.Contactinfo .box {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 18px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.Contactinfo .icon {
+    min-width: 50px;
+    height: 50px;
+    background: #e6f5f3;
+    color: #ff0000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+.Contactinfo .text h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: #ffffff;
+}
+.Contactinfo .text p {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+@media (max-width: 900px){
+    .faq-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* ---------- TABLET ---------- */
+@media(max-width:1100px){
+
+.destination-container{
+  flex-direction:column;
+  text-align:center;
+}
+
+.destination-images{
+  justify-content:center;
+}
+
+.destination-text{
+  max-width:100%;
+}
+
+}
+/* ---------- MOBILE ---------- */
+@media(max-width:768px){
+
+.destination{
+  padding:80px 6%;
+}
+
+.destination-text h1{
+  font-size:36px;
+}
+
+.destination-images{
+  flex-direction:column;
+}
+
+.img-large img{
+  width:90%;
+  height:auto;
+}
+
+.img-right{
+  flex-direction:row;
+  justify-content:center;
+}
+
+.img-small img{
+  width:45%;
+  height:auto;
+}
+
+}
+/* ---------- SMALL PHONES ---------- */
+@media(max-width:480px){
+
+.destination-text h1{
+  font-size:28px;
+}
+
+.destination-buttons{
+  flex-direction:column;
+  gap:15px;
+}
+
+.img-small img{
+  width:100%;
+}
+
+.img-right{
+  flex-direction:column;
+}
+
+}
+</style>
+<body>
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="dots">
+            <span style="--i:1"></span>
+            <span style="--i:2"></span>
+            <span style="--i:3"></span>
+            <span style="--i:4"></span>
+            <span style="--i:5"></span>
+            <span style="--i:6"></span>
+            <span style="--i:7"></span>
+            <span style="--i:8"></span>
+            <span style="--i:9"></span>
+            <span style="--i:10"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:13"></span>
+            <span style="--i:14"></span>
+            <span style="--i:15"></span>
+        </div>
+    </div>
+    <!--whatsapp-->
+    <a href="https://wa.me/254141031614?text=Hello%20Cyclegraph%20Solutions!%20I'm%20interested%20in%20your%20Car%20care%20products" 
+        class="whatsapp-float" 
+        target="_blank">
+
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-text">Order via WhatsApp</span>
+
+    </a>
+    <!--scrollbutton-->
+    <div id="progress">
+        <span id="progress-value">&#8593</span>
+    </div>
+    <!--main-->
+    <div id="page-content">
+    <!--header-->
+    <header class="main-header">
+
+        <div class="logo-wrapper">
+            <img src="Logo/Screenshot_2026-04-13_1058345-removebg-preview.png" class="logo">
+        </div>
+
+
+        <div class="menuToggle"></div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="about.html" class="dropbtn">
+                        <span>About Us</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="who_we_are.html">Who we are</a></li>
+                        <li><a href="our_edge.html">Our Edge</a></li>
+                    </ul>
+                </li>
+                <li><a href="product.html">Products</a></li>
+                <li class="dropdown">
+                    <a href="our_partner.html" class="dropbtn">
+                        <span>Our Partners</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="business_to_business.html">Business to Business (B2B)</a></li>
+                        <li><a href="business_to_customer.html">Business to Customer (B2C)</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--heros section-->
+    <section class="hero-about">
+        <div class="about-content">
+            <h2>Who we are</h2>
+            <p>Professional Car Care Solutions</p>
+        </div>
+    </section>
+    <!--about-->
+    <section class="destination">
+
+        <div class="destination-container">
+
+            <!-- LEFT CONTENT --> 
+            <div class="destination-text" data-aos="fade-up" data-aos-delay="100">
+                <h1>Who we are...<br>
+                <span class="highlight">Cyclegraph Solutions</span>
+                </h1>
+                <p>We are a dedicated supplier of high-quality car care products, committed to 
+                helping car owners, car washes, and garages achieve professional results with ease.
+                <br>Through efficient sourcing and reliable distribution, we ensure our products are 
+                consistently available, affordable, and designed to meet the demands of everyday use 
+                and professional applications.
+                </p>
+
+                <div class="destination-buttons" data-aos="zoom-in" data-aos-delay="100">
+
+                    <a href="#" class="btn-outline">CONTACT US</a>
+
+                    <span class="or">OR</span>
+
+                    <a href="#" class="btn-outline">ORDER NOW</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT IMAGES -->
+            <div class="destination-images">
+
+                <div class="img-large">
+                    <img src="Images/3e0537a159cc51f46a93c97ac17ba03d.jpg" alt="" data-aos="zoom-in" data-aos-delay="300">
+                </div>
+
+                <div class="img-right">
+
+                <div class="img-small">
+                    <img src="Images/WhatsApp Image 2026-04-17 at 12.34.281.jpeg" alt="" data-aos="zoom-in" data-aos-delay="400">
+                </div>
+
+                <div class="img-small">
+                    <img src="Images/308184367663dc1f1349d1ee1ac740c3.jpg" alt="" data-aos="zoom-in" data-aos-delay="400">
+                </div>
+
+            </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!--about section-->
+    <section class="about-section">
+        <div class="container">
+            <div class="image-section" data-aos="zoom-in" data-aos-delay="100">
+                <img src="Images/WhatsApp Image 2026-04-17 at 12.34.28.jpeg">
+            </div>
+            <div class="content-section" data-aos="zoom-in" data-aos-delay="200">
+                <div class="top">
+                    <h3>Our Mission</h3>
+                    <p class="about-text">To provide accessible, high-quality car care solutions by leveraging our 
+                        strong sourcing and distribution capabilities ensuring our customers and partners always 
+                        have the products they need, when they need them.
+                    </p>
+                    <h3>Our Vision</h3>
+                    <p class="about-text">To empower our partners and customers to achieve long-term growth, sustainability, 
+                        and competitiveness by delivering products that maximize value and performance.
+                    </p>
+            </div>
+        </div>
+    </section>
+    <!--footer-->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+        <!-- Column 1 -->
+        <div class="footer-col footer-brand">
+
+            <div class="logo">
+                <span><img src="Logo/Screenshot 2026-04-13 105834.png" alt="CYCLEGRAPH Logo"></span><h3>CYCLEGRAPH</h3>
+            </div>
+
+            <p>
+            We understand the importance of efficiency in the trade channel, helping our partners reduce costs and improve their bottom line.
+            </p>
+
+        </div>
+
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h4>Visit Us</h4>
+                <p>Ngong Road</p>
+                <p>Tel: 020 2122212</p>
+            </div>
+
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h4>Working Hours</h4>
+                <p>Monday – Friday</p>
+                <p>09:00 am – 09:00 pm</p>
+                <p>Saturday/Sunday – Closed</p>
+            </div>
+
+
+            <!-- Column 4 -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Products</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+
+            <p>© All rights reserved. Crafted @  <a href="https://wa.me/254700073919?text=Hello%20I%20am%20interested%20in%20your%20services">Brydex Technologies</p>
+
+            <div class="footer-links">
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1500, once: true });
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const loader = document.getElementById("loader");
+            const content = document.getElementById("page-content");
+            const topFooter = document.getElementById("top-footer");
+            const menuToggle = document.querySelector('.menuToggle');
+            const header = document.querySelector('.main-header');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            // LOADER + BLUR TRANSITION
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    loader.style.opacity = "0";
+
+                    setTimeout(() => {
+                        loader.style.display = "none";
+
+                        content.style.opacity = "1";
+                        content.style.filter = "blur(0)";
+                        content.style.transition = "all 0.6s ease";
+
+                        document.body.style.overflow = "auto";
+
+                        topFooter.classList.add("show");
+                    }, 500);
+                }, 2500);
+            });
+
+            // MOBILE MENU
+            menuToggle.addEventListener('click', e => {
+                e.stopPropagation();
+                header.classList.toggle('active');
+            });
+
+            // DROPDOWN (mobile)
+            dropdowns.forEach(dropdown => {
+                const icon = dropdown.querySelector('.dropbtn i');
+
+                icon.addEventListener('click', e => {
+                    if (window.innerWidth > 900) return;
+
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    dropdowns.forEach(d => {
+                        if (d !== dropdown) d.classList.remove('active');
+                    });
+
+                    dropdown.classList.toggle('active');
+                });
+            });
+
+            // SCROLL BUTTON
+            let calcScrollValue = () => {
+                let scrollProgress = document.getElementById("progress");
+                let pos = document.documentElement.scrollTop;
+                let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrollValue = Math.round((pos * 100)/calcHeight);
+
+                if (pos > 100) {
+                    scrollProgress.style.display = "grid";
+                } else {
+                    scrollProgress.style.display = "none";
+                }
+
+                scrollProgress.onclick = () => {
+                    document.documentElement.scrollTop = 0;
+                };
+
+                scrollProgress.style.background =
+                    `conic-gradient(red ${scrollValue}%, white ${scrollValue}%)`;
+            };
+
+            window.addEventListener("scroll", calcScrollValue);
+
+            //WHATSAPP BUTTON
+           const whatsapp = document.querySelector('.whatsapp-float');
+
+            let lastScrollY = window.scrollY;
+            let idleTimer;
+            let visible = false;
+
+            /* 🔹 SCROLL BEHAVIOR */
+            window.addEventListener('scroll', function () {
+                let currentScrollY = window.scrollY;
+
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    // scrolling down
+                    showWhatsApp();
+                } else {
+                    // scrolling up
+                    hideWhatsApp();
+                }
+
+                lastScrollY = currentScrollY;
+
+                resetIdleTimer();
+            });
+
+            /* 🔹 IDLE BEHAVIOR (auto trigger) */
+            function resetIdleTimer() {
+                clearTimeout(idleTimer);
+
+                idleTimer = setTimeout(() => {
+                    showWhatsApp();
+
+                    setTimeout(() => {
+                        hideWhatsApp();
+                    }, 4000);
+
+                }, 5000); // shows after 5s of no activity
+            }
+
+            /* 🔹 SHOW / HIDE FUNCTIONS */
+            function showWhatsApp() {
+                if (!visible) {
+                    whatsapp.classList.add('show');
+                    visible = true;
+                }
+            }
+
+            function hideWhatsApp() {
+                whatsapp.classList.remove('show');
+                visible = false;
+            }
+
+            /* 🔹 INITIAL TRIGGER */
+            resetIdleTimer();
+
+
+        });
+
+    </script>
+</body>
+</html>

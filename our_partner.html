@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--favicon-->
+    <link rel="icon" href="Logo/Screenshot 2026-04-13 105834.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.typekit.net/hln2bjh.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <title>Business to Customer - Cyclegraph Solutions</title>
+</head>
+<style>
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ===== HERO ===== */
+.partners-hero {
+    text-align: center;
+    padding: 120px 20px 90px;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+                url('Images/car-bg.jpg') center/cover;
+    color: #fff;
+}
+
+.partners-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.partners-hero p {
+    max-width: 600px;
+    margin: auto;
+    opacity: 0.85;
+}
+
+/* ===== ABOUT ===== */
+.partner-about {
+    padding: 80px 20px;
+}
+
+.partner-about h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.partner-about p {
+    color: white;
+    margin-bottom: 18px;
+    max-width: 800px;
+}
+
+/* ===== STRENGTH SECTION ===== */
+.partner-strengths {
+    padding: 90px 20px;
+    background: var(--dark);
+    color: #fff;
+    text-align: center;
+}
+
+.partner-strengths h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+/* GRID */
+.strength-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* CARDS */
+.strength-card {
+    padding: 30px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle gradient glow */
+.strength-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(255,0,0,0.25), transparent);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+/* hover */
+.strength-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.strength-card:hover::before {
+    opacity: 1;
+}
+
+/* ICON */
+.strength-card i {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: white;
+    transition: 0.3s;
+}
+
+.strength-card:hover i {
+    transform: scale(1.2) rotate(6deg);
+}
+
+/* TEXT */
+.strength-card h3 {
+    margin-bottom: 10px;
+}
+
+.strength-card p {
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+/* ===== IMPACT SECTION ===== */
+.partner-impact {
+    padding: 80px 20px;
+    color: white;
+}
+
+.partner-impact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.partner-impact ul {
+    list-style: none;
+    margin-top: 25px;
+    max-width: 600px;
+}
+
+.partner-impact li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    font-weight: 500;
+}
+
+/* custom check */
+.partner-impact li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: white;
+}
+
+/* ===== CTA ===== */
+.partner-cta {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #000, #111);
+    color: #fff;
+}
+
+.partner-cta h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.partner-cta p {
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: var(--primary);
+    color: #fff;
+    background: red;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #222;
+    transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    .partners-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .partner-about h2,
+    .partner-impact h2,
+    .partner-strengths h2 {
+        font-size: 1.6rem;
+    }
+
+    .partner-about p {
+        font-size: 0.95rem;
+    }
+}
+</style>
+<body>
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="dots">
+            <span style="--i:1"></span>
+            <span style="--i:2"></span>
+            <span style="--i:3"></span>
+            <span style="--i:4"></span>
+            <span style="--i:5"></span>
+            <span style="--i:6"></span>
+            <span style="--i:7"></span>
+            <span style="--i:8"></span>
+            <span style="--i:9"></span>
+            <span style="--i:10"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:13"></span>
+            <span style="--i:14"></span>
+            <span style="--i:15"></span>
+        </div>
+    </div>
+    <!--whatsapp-->
+    <a href="https://wa.me/254141031614?text=Hello%20Cyclegraph%20Solutions!%20I'm%20interested%20in%20your%20Car%20care%20products" 
+        class="whatsapp-float" 
+        target="_blank">
+
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-text">Order via WhatsApp</span>
+
+    </a>
+    <!--scrollbutton-->
+    <div id="progress">
+        <span id="progress-value">&#8593</span>
+    </div>
+    <!--main-->
+    <div id="page-content">
+    <!--header-->
+    <header class="main-header">
+
+        <div class="logo-wrapper">
+            <img src="Logo/Screenshot_2026-04-13_1058345-removebg-preview.png" class="logo">
+        </div>
+
+
+        <div class="menuToggle"></div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="about.html" class="dropbtn">
+                        <span>About Us</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="who_we_are.html">Who we are</a></li>
+                        <li><a href="our_edge.html">Our Edge</a></li>
+                    </ul>
+                </li>
+                <li><a href="product.html">Products</a></li>
+                <li class="dropdown">
+                    <a href="our_partner.html" class="dropbtn">
+                        <span>Our Partners</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="business_to_business.html">Business to Business (B2B)</a></li>
+                        <li><a href="business_to_customer.html">Business to Customer (B2C)</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--our partner-->
+    <section class="partners-hero">
+        <h1>Our Partners</h1>
+        <p>
+            We collaborate with globally recognized manufacturers to deliver high-quality car care solutions.
+        </p>
+    </section>
+
+    <!-- SUPPLIER SECTION -->
+    <section class="partner-about container">
+
+        <h2>Guangzhou Biaobang Car Care Industry Co., Ltd.</h2>
+
+        <p>
+            Our products are supplied by Guangzhou Biaobang Car Care Industry Co., Ltd., 
+            an ISO-9002 certified manufacturer specializing in car care, detailing, and spray paint solutions 
+            for the international market.
+        </p>
+
+        <p>
+            With over 10 years of industry experience, a highly skilled research and development team, 
+            and advanced laboratory support from leading universities, Biaobang consistently delivers 
+            innovative and high-performance products.
+        </p>
+
+        <p>
+            Their modern factory spans over 80,000 square meters, equipped with 16 fully automated production lines 
+            and staffed by over 200 qualified professionals, ensuring efficiency, consistency, and quality at scale.
+        </p>
+
+    </section>
+
+    <!-- STRENGTHS -->
+    <section class="partner-strengths">
+
+        <div class="container">
+            <h2>What Makes Them Stand Out</h2>
+
+            <div class="strength-grid">
+
+                <div class="strength-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>ISO Certified</h3>
+                    <p>Manufactured under ISO-9002 quality standards for consistent and reliable products.</p>
+                </div>
+
+                <div class="strength-card">
+                    <i class="fas fa-flask"></i>
+                    <h3>Advanced R&D</h3>
+                    <p>Backed by university laboratories and a highly educated research team.</p>
+                </div>
+
+                <div class="strength-card">
+                    <i class="fas fa-industry"></i>
+                    <h3>Large-Scale Production</h3>
+                    <p>80,000+ sqm factory with 16 automated production lines.</p>
+                </div>
+
+                <div class="strength-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Expert Workforce</h3>
+                    <p>Over 200 skilled professionals ensuring product excellence.</p>
+                </div>
+
+                <div class="strength-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Recognized Brand</h3>
+                    <p>"BIAOBANG" is a trusted and recognized brand in global markets.</p>
+                </div>
+
+                <div class="strength-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Global Reach</h3>
+                    <p>Strong presence in both domestic and international markets.</p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- WHY IT MATTERS -->
+    <section class="partner-impact container">
+
+        <h2>What This Means for You</h2>
+
+        <ul>
+            <li>Consistent product quality you can rely on</li>
+            <li>Competitive pricing from efficient production</li>
+            <li>Proven products trusted globally</li>
+            <li>Reliable supply for businesses and individuals</li>
+        </ul>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="partner-cta">
+        <h2>Work With Trusted Products</h2>
+        <p>Experience quality car care solutions backed by global manufacturing excellence.</p>
+
+        <a href="products.html" class="btn">Explore Products</a>
+    </section>
+    <!--footer-->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+        <!-- Column 1 -->
+        <div class="footer-col footer-brand">
+
+            <div class="logo">
+                <span><img src="Logo/Screenshot 2026-04-13 105834.png" alt="CYCLEGRAPH Logo"></span><h3>CYCLEGRAPH</h3>
+            </div>
+
+            <p>
+            We understand the importance of efficiency in the trade channel, helping our partners reduce costs and improve their bottom line.
+            </p>
+
+        </div>
+
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h4>Visit Us</h4>
+                <p>Ngong Road</p>
+                <p>Tel: 020 2122212</p>
+            </div>
+
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h4>Working Hours</h4>
+                <p>Monday – Friday</p>
+                <p>09:00 am – 09:00 pm</p>
+                <p>Saturday/Sunday – Closed</p>
+            </div>
+
+
+            <!-- Column 4 -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Products</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+
+            <p>© All rights reserved. Crafted @  <a href="https://wa.me/254700073919?text=Hello%20I%20am%20interested%20in%20your%20services">Brydex Technologies</p>
+
+            <div class="footer-links">
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1500, once: true });
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const loader = document.getElementById("loader");
+            const content = document.getElementById("page-content");
+            const topFooter = document.getElementById("top-footer");
+            const menuToggle = document.querySelector('.menuToggle');
+            const header = document.querySelector('.main-header');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            // LOADER + BLUR TRANSITION
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    loader.style.opacity = "0";
+
+                    setTimeout(() => {
+                        loader.style.display = "none";
+
+                        content.style.opacity = "1";
+                        content.style.filter = "blur(0)";
+                        content.style.transition = "all 0.6s ease";
+
+                        document.body.style.overflow = "auto";
+
+                        topFooter.classList.add("show");
+                    }, 500);
+                }, 2500);
+            });
+
+            // MOBILE MENU
+            menuToggle.addEventListener('click', e => {
+                e.stopPropagation();
+                header.classList.toggle('active');
+            });
+
+            // DROPDOWN (mobile)
+            dropdowns.forEach(dropdown => {
+                const icon = dropdown.querySelector('.dropbtn i');
+
+                icon.addEventListener('click', e => {
+                    if (window.innerWidth > 900) return;
+
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    dropdowns.forEach(d => {
+                        if (d !== dropdown) d.classList.remove('active');
+                    });
+
+                    dropdown.classList.toggle('active');
+                });
+            });
+
+            // SCROLL BUTTON
+            let calcScrollValue = () => {
+                let scrollProgress = document.getElementById("progress");
+                let pos = document.documentElement.scrollTop;
+                let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrollValue = Math.round((pos * 100)/calcHeight);
+
+                if (pos > 100) {
+                    scrollProgress.style.display = "grid";
+                } else {
+                    scrollProgress.style.display = "none";
+                }
+
+                scrollProgress.onclick = () => {
+                    document.documentElement.scrollTop = 0;
+                };
+
+                scrollProgress.style.background =
+                    `conic-gradient(red ${scrollValue}%, white ${scrollValue}%)`;
+            };
+
+            window.addEventListener("scroll", calcScrollValue);
+
+            //WHATSAPP BUTTON
+           const whatsapp = document.querySelector('.whatsapp-float');
+
+            let lastScrollY = window.scrollY;
+            let idleTimer;
+            let visible = false;
+
+            /* 🔹 SCROLL BEHAVIOR */
+            window.addEventListener('scroll', function () {
+                let currentScrollY = window.scrollY;
+
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    // scrolling down
+                    showWhatsApp();
+                } else {
+                    // scrolling up
+                    hideWhatsApp();
+                }
+
+                lastScrollY = currentScrollY;
+
+                resetIdleTimer();
+            });
+
+            /* 🔹 IDLE BEHAVIOR (auto trigger) */
+            function resetIdleTimer() {
+                clearTimeout(idleTimer);
+
+                idleTimer = setTimeout(() => {
+                    showWhatsApp();
+
+                    setTimeout(() => {
+                        hideWhatsApp();
+                    }, 4000);
+
+                }, 5000); // shows after 5s of no activity
+            }
+
+            /* 🔹 SHOW / HIDE FUNCTIONS */
+            function showWhatsApp() {
+                if (!visible) {
+                    whatsapp.classList.add('show');
+                    visible = true;
+                }
+            }
+
+            function hideWhatsApp() {
+                whatsapp.classList.remove('show');
+                visible = false;
+            }
+
+            /* 🔹 INITIAL TRIGGER */
+            resetIdleTimer();
+
+
+        });
+
+    </script>
+</body>
+</html>

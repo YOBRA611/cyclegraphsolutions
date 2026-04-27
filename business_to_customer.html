@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--favicon-->
+    <link rel="icon" href="Logo/Screenshot 2026-04-13 105834.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.typekit.net/hln2bjh.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <title>Business to Customer - Cyclegraph Solutions</title>
+</head>
+<style>
+/* HERO */
+.b2c-hero {
+    text-align: center;
+    padding: 90px 20px;
+    background: #111;
+    color: #fff;
+}
+
+.b2c-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.b2c-hero p {
+    max-width: 600px;
+    margin: auto;
+    opacity: 0.8;
+}
+
+/* BENEFITS */
+.b2c-benefits {
+    padding: 70px 20px;
+}
+
+.b2c-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* CARDS */
+.b2c-card {
+    background: #1e1e1e;
+    color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.b2c-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ICON */
+.b2c-card i {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #ff0000;
+}
+
+/* CTA */
+.b2c-cta {
+    text-align: center;
+    padding: 80px 20px;
+    color: #fff;
+    background: #000000;
+}
+
+.b2c-cta h2 {
+    margin-bottom: 10px;
+}
+.b2c-cta a{
+    margin-top: 20px;
+}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .b2c-hero h1 {
+        font-size: 2rem;
+    }
+}
+</style>
+<body>
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="dots">
+            <span style="--i:1"></span>
+            <span style="--i:2"></span>
+            <span style="--i:3"></span>
+            <span style="--i:4"></span>
+            <span style="--i:5"></span>
+            <span style="--i:6"></span>
+            <span style="--i:7"></span>
+            <span style="--i:8"></span>
+            <span style="--i:9"></span>
+            <span style="--i:10"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:13"></span>
+            <span style="--i:14"></span>
+            <span style="--i:15"></span>
+        </div>
+    </div>
+    <!--whatsapp-->
+    <a href="https://wa.me/254141031614?text=Hello%20Cyclegraph%20Solutions!%20I'm%20interested%20in%20your%20Car%20care%20products" 
+        class="whatsapp-float" 
+        target="_blank">
+
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-text">Order via WhatsApp</span>
+
+    </a>
+    <!--scrollbutton-->
+    <div id="progress">
+        <span id="progress-value">&#8593</span>
+    </div>
+    <!--main-->
+    <div id="page-content">
+    <!--header-->
+    <header class="main-header">
+
+        <div class="logo-wrapper">
+            <img src="Logo/Screenshot_2026-04-13_1058345-removebg-preview.png" class="logo">
+        </div>
+
+
+        <div class="menuToggle"></div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="about.html" class="dropbtn">
+                        <span>About Us</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="who_we_are.html">Who we are</a></li>
+                        <li><a href="our_edge.html">Our Edge</a></li>
+                    </ul>
+                </li>
+                <li><a href="product.html">Products</a></li>
+                <li class="dropdown">
+                    <a href="our_partner.html" class="dropbtn">
+                        <span>Our Partners</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="business_to_business.html">Business to Business (B2B)</a></li>
+                        <li><a href="business_to_customer.html">Business to Customer (B2C)</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--B2C-->
+    <section class="b2c-hero">
+        <h1>For Car Owners</h1>
+        <p>Premium car care products to keep your vehicle clean, protected, and shining every day.</p>
+    </section>
+
+    <section class="b2c-benefits">
+
+        <div class="b2c-grid">
+
+            <div class="b2c-card">
+                <i class="fas fa-star"></i>
+                <h3>High Quality</h3>
+                <p>Professional-grade products for the best results.</p>
+            </div>
+
+            <div class="b2c-card">
+                <i class="fas fa-sparkles"></i>
+                <h3>Easy to Use</h3>
+                <p>Simple application for quick and effective results.</p>
+            </div>
+
+            <div class="b2c-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Long-lasting Protection</h3>
+                <p>Keep your car looking new for longer.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="b2c-cta">
+        <h2>Shop Car Care Products</h2>
+        <p>Explore our range and order easily via WhatsApp.</p>
+
+        <a href="products.html" class="btn">View Products</a>
+    </section>
+    <!--footer-->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+        <!-- Column 1 -->
+        <div class="footer-col footer-brand">
+
+            <div class="logo">
+                <span><img src="Logo/Screenshot 2026-04-13 105834.png" alt="CYCLEGRAPH Logo"></span><h3>CYCLEGRAPH</h3>
+            </div>
+
+            <p>
+            We understand the importance of efficiency in the trade channel, helping our partners reduce costs and improve their bottom line.
+            </p>
+
+        </div>
+
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h4>Visit Us</h4>
+                <p>Ngong Road</p>
+                <p>Tel: 020 2122212</p>
+            </div>
+
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h4>Working Hours</h4>
+                <p>Monday – Friday</p>
+                <p>09:00 am – 09:00 pm</p>
+                <p>Saturday/Sunday – Closed</p>
+            </div>
+
+
+            <!-- Column 4 -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Products</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+
+            <p>© All rights reserved. Crafted @  <a href="https://wa.me/254700073919?text=Hello%20I%20am%20interested%20in%20your%20services">Brydex Technologies</p>
+
+            <div class="footer-links">
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1500, once: true });
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const loader = document.getElementById("loader");
+            const content = document.getElementById("page-content");
+            const topFooter = document.getElementById("top-footer");
+            const menuToggle = document.querySelector('.menuToggle');
+            const header = document.querySelector('.main-header');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            // LOADER + BLUR TRANSITION
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    loader.style.opacity = "0";
+
+                    setTimeout(() => {
+                        loader.style.display = "none";
+
+                        content.style.opacity = "1";
+                        content.style.filter = "blur(0)";
+                        content.style.transition = "all 0.6s ease";
+
+                        document.body.style.overflow = "auto";
+
+                        topFooter.classList.add("show");
+                    }, 500);
+                }, 2500);
+            });
+
+            // MOBILE MENU
+            menuToggle.addEventListener('click', e => {
+                e.stopPropagation();
+                header.classList.toggle('active');
+            });
+
+            // DROPDOWN (mobile)
+            dropdowns.forEach(dropdown => {
+                const icon = dropdown.querySelector('.dropbtn i');
+
+                icon.addEventListener('click', e => {
+                    if (window.innerWidth > 900) return;
+
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    dropdowns.forEach(d => {
+                        if (d !== dropdown) d.classList.remove('active');
+                    });
+
+                    dropdown.classList.toggle('active');
+                });
+            });
+
+            // SCROLL BUTTON
+            let calcScrollValue = () => {
+                let scrollProgress = document.getElementById("progress");
+                let pos = document.documentElement.scrollTop;
+                let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrollValue = Math.round((pos * 100)/calcHeight);
+
+                if (pos > 100) {
+                    scrollProgress.style.display = "grid";
+                } else {
+                    scrollProgress.style.display = "none";
+                }
+
+                scrollProgress.onclick = () => {
+                    document.documentElement.scrollTop = 0;
+                };
+
+                scrollProgress.style.background =
+                    `conic-gradient(red ${scrollValue}%, white ${scrollValue}%)`;
+            };
+
+            window.addEventListener("scroll", calcScrollValue);
+
+            //WHATSAPP BUTTON
+           const whatsapp = document.querySelector('.whatsapp-float');
+
+            let lastScrollY = window.scrollY;
+            let idleTimer;
+            let visible = false;
+
+            /* 🔹 SCROLL BEHAVIOR */
+            window.addEventListener('scroll', function () {
+                let currentScrollY = window.scrollY;
+
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    // scrolling down
+                    showWhatsApp();
+                } else {
+                    // scrolling up
+                    hideWhatsApp();
+                }
+
+                lastScrollY = currentScrollY;
+
+                resetIdleTimer();
+            });
+
+            /* 🔹 IDLE BEHAVIOR (auto trigger) */
+            function resetIdleTimer() {
+                clearTimeout(idleTimer);
+
+                idleTimer = setTimeout(() => {
+                    showWhatsApp();
+
+                    setTimeout(() => {
+                        hideWhatsApp();
+                    }, 4000);
+
+                }, 5000); // shows after 5s of no activity
+            }
+
+            /* 🔹 SHOW / HIDE FUNCTIONS */
+            function showWhatsApp() {
+                if (!visible) {
+                    whatsapp.classList.add('show');
+                    visible = true;
+                }
+            }
+
+            function hideWhatsApp() {
+                whatsapp.classList.remove('show');
+                visible = false;
+            }
+
+            /* 🔹 INITIAL TRIGGER */
+            resetIdleTimer();
+
+
+        });
+
+    </script>
+</body>
+</html>
